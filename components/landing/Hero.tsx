@@ -1,10 +1,14 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
 
 import { HeadphonesIcon, Music2Icon, TabletsIcon } from "lucide-react"
 import Link from "next/link"
 import Hero from "../Spline/Hero"
+import { useRouter } from "next/navigation"
+import { Button } from "../ui/button"
 
 export default function Welcome() {
+  const router = useRouter()
   return (
     <div className="flex flex-col min-h-[100dvh]">
       {/* <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -49,13 +53,13 @@ export default function Welcome() {
                     artists, and personalized recommendations.
                   </p>
                 </div>
-                <Link
-                  href="#"
+                <Button
+                  onClick={() => router.push('/dashboard')}
                   className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
+                  
                 >
                   Sign Up for Free
-                </Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -152,7 +156,7 @@ export default function Welcome() {
                 <Link href="#" className="group" prefetch={false}>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted">
                     <img
-                      src="/placeholder.svg"
+                      src="https://i.ytimg.com/vi/68tO9KsvbkU/maxresdefault.jpg"
                       width="400"
                       height="300"
                       alt="Playlist 1"
@@ -165,7 +169,7 @@ export default function Welcome() {
                 <Link href="#" className="group" prefetch={false}>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted">
                     <img
-                      src="/placeholder.svg"
+                      src="https://th.bing.com/th/id/R.e7b1563442502ecf564cc3b630790f28?rik=gWv6uOIkx8XF%2bQ&pid=ImgRaw&r=0"
                       width="400"
                       height="300"
                       alt="Playlist 2"
@@ -178,7 +182,7 @@ export default function Welcome() {
                 <Link href="#" className="group" prefetch={false}>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted">
                     <img
-                      src="/placeholder.svg"
+                      src="https://th.bing.com/th/id/OIP.J7sHqLHiTvqg-EPlaSxX-AHaHa?rs=1&pid=ImgDetMain"
                       width="400"
                       height="300"
                       alt="Playlist 3"
@@ -191,7 +195,7 @@ export default function Welcome() {
                 <Link href="#" className="group" prefetch={false}>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted">
                     <img
-                      src="/placeholder.svg"
+                      src="https://images.hdqwalls.com/wallpapers/charlie-puth-2018-4k-mi.jpg"
                       width="400"
                       height="300"
                       alt="Playlist 4"
