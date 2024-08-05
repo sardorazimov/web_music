@@ -3,8 +3,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <DashboardHero />
+    <div className='flex flex-col mx-auto'>
+       a
     </div>
   )
 }

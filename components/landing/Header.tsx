@@ -7,7 +7,7 @@ import { ModeToggle } from "../providers/toogle"
 
 const Header = () => {
   return (
-    <header className="fixed w-full bg-white dark:bg-black">
+    <header className="fixed w-full bg-white dark:bg-black backdrop-blur-sm">
        <div className="  lg:flex  w-full   justify-between">
         <Link href={'/'} className="mx-6 my-3 font-bold text-xl flex gap-2">Music 
         <Music4  className="flex animate-bounce" />

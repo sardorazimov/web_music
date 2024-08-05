@@ -1,9 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/oMciwezCinq
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -13,7 +9,9 @@ import { AirplayIcon, AlbumIcon, BellIcon, HomeIcon, Music2Icon, SearchIcon, Set
 
 export default function DashboardHero() {
   return (
-    <main></main>
+    <div className="flex">
+       aaaaa
+    </div>
   )
 }
 

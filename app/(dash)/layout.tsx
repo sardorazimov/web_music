@@ -1,11 +1,15 @@
+import Sidebar from "@/components/dashboard/sidebar"
 
 
-const Dashlayout = ({children}:{children:React.ReactNode}) => {
+const layout = ({children}:{children:React.ReactNode}) => {
   return (
-    <main>
-      {children}
-    </main>
+    <div className="flex ">
+      <div className=" w-auto">
+         <Sidebar /> 
+        {children}
+      </div>
+    </div>
   )
 }
 
-export default Dashlayout
+export default layout
