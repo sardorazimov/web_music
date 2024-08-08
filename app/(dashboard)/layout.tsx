@@ -1,3 +1,4 @@
+import Navbar from "@/components/dashboard/NavBar"
 import Sidebar from "@/components/dashboard/sidebar"
 
 
@@ -7,7 +8,7 @@ const layout = ({children}:{children:React.ReactNode}) => {
       <div className="flex w-56 h-screen">
         <Sidebar /> 
       </div>
-        {children}
+      {children}  
     </div>
   )
 }

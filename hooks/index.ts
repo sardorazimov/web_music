@@ -5,6 +5,11 @@ const sidebarlinks = [
       label: "Home",
       icon: "/svg/home.svg"
     },
+     {
+      href: '/search',
+      label: "Search",
+      icon:'/svg/setting.svg'
+    },
     {
       href: '/library',
       label: "Library",
@@ -25,6 +30,7 @@ const sidebarlinks = [
       label: "Settings",
       icon:'/svg/setting.svg'
     },
+   
   ];
 
 export default sidebarlinks
