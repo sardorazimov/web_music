@@ -56,7 +56,7 @@ const Sidebar = () => {
     )
   }
   return (
-    <div className="fixed  w-52 top-0 left-0 border-r ">
+    <div className="fixed  lg:w-52 top-0 left-0 border-r sm:flex ">
       <div className="lg:flex  mx-5  h-screen hidden mt-10 my-20 ">
         <div className="flex flex-col ">
           <Link href={'/'} className="text-xl font-bold mx-4">Music web</Link>
