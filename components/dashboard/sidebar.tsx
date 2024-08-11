@@ -32,7 +32,7 @@ const Sidebar = () => {
           <Button
             variant={'outline'}
             size={'sm'}
-            className="font-mono bg-white/10 hover:bg-white/20 hover:text-white
+            className="hidden font-mono bg-white/10 hover:bg-white/20 hover:text-white
            border-none focus-visible:ring-offset-0 focus-visible:ring-transparent 
            outline-none text-white focus:bg-white/30 transition">
             <MenuIcon className="size-5" />
@@ -56,8 +56,8 @@ const Sidebar = () => {
     )
   }
   return (
-    <div className="fixed  lg:w-52 top-0 left-0 border-r sm:flex ">
-      <div className="lg:flex  mx-5  h-screen hidden mt-10 my-20 ">
+    <div className="lg:fixed ">
+      <div className="lg:flex top-0 lg:w-44 border-r  mx-5  h-screen hidden mt-10 my-20 ">
         <div className="flex flex-col ">
           <Link href={'/'} className="text-xl font-bold mx-4">Music web</Link>
           <nav className="hidden lg:flex lg:flex-col items-center py-10 gap-x-2 overflow-x-auto">

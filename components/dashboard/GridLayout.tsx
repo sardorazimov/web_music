@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import {
@@ -17,201 +18,372 @@ import { useOutsideClick } from "@/hooks/outside";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { ListIcon, MoveHorizontalIcon, PlayIcon, RepeatIcon, ShuffleIcon, SkipBackIcon, SkipForwardIcon, Volume2Icon } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { Badge, File, ListFilter, ListIcon, MoreHorizontal, MoveHorizontalIcon, PlayIcon, PlusCircle, RepeatIcon, ShuffleIcon, SkipBackIcon, SkipForwardIcon, Volume2Icon } from "lucide-react";
 import { Slider } from "../ui/slider";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
   
 
 
 const GridLayout = () => {
-    // const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    //     null
-    //   );
-    //   const id = useId();
-    //   const ref = useRef<HTMLDivElement>(null);
-     
-    //   useEffect(() => {
-    //     function onKeyDown(event: KeyboardEvent) {
-    //       if (event.key === "Escape") {
-    //         setActive(false);
-    //       }
-    //     }
-     
-    //     if (active && typeof active === "object") {
-    //       document.body.style.overflow = "hidden";
-    //     } else {
-    //       document.body.style.overflow = "auto";
-    //     }
-     
-    //     window.addEventListener("keydown", onKeyDown);
-    //     return () => window.removeEventListener("keydown", onKeyDown);
-    //   }, [active]);
-     
-    //   useOutsideClick(ref, () => setActive(null));
     
   return (
-    <section className="mx-20">
-     <main className="flex-1 overflow-auto">
-    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      <Card className="group">
-        <CardContent className="relative flex h-full flex-col items-center justify-center gap-4 overflow-hidden rounded-lg">
-          <img
-            src="https://i.ytimg.com/vi/0xxZ_hwe8-0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLCJTwsNQTm1GmxdWiikCJEjEFyA9g"
-            width={300}
-            height={300}
-            alt="Album Cover"
-            className="aspect-square w-full rounded-lg object-cover transition-all group-hover:scale-105"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
-            <h3 className="text-xl font-bold text-white">Album Name</h3>
-            <p className="text-sm text-white">Artist Name</p>
-            <Button variant="outline" className="text-white">
-              Play
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="group">
-        <CardContent className="relative flex h-full flex-col items-center justify-center gap-4 overflow-hidden rounded-lg">
-          <img
-            src="https://i.ytimg.com/vi/0xxZ_hwe8-0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLCJTwsNQTm1GmxdWiikCJEjEFyA9g"
-            width={300}
-            height={300}
-            alt="Album Cover"
-            className="aspect-square w-full rounded-lg object-cover transition-all group-hover:scale-105"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
-            <h3 className="text-xl font-bold text-white">Album Name</h3>
-            <p className="text-sm text-white">Artist Name</p>
-            <Button variant="outline" className="text-white">
-              Play
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="group">
-        <CardContent className="relative flex h-full flex-col items-center justify-center gap-4 overflow-hidden rounded-lg">
-          <img
-            src="https://i.ytimg.com/vi/0xxZ_hwe8-0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLCJTwsNQTm1GmxdWiikCJEjEFyA9g"
-            width={300}
-            height={300}
-            alt="Album Cover"
-            className="aspect-square w-full rounded-lg object-cover transition-all group-hover:scale-105"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
-            <h3 className="text-xl font-bold text-white">Album Name</h3>
-            <p className="text-sm text-white">Artist Name</p>
-            <Button variant="outline" className="text-white">
-              Play
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="group">
-        <CardContent className="relative flex h-full flex-col items-center justify-center gap-4 overflow-hidden rounded-lg">
-          <img
-            src="https://i.ytimg.com/vi/0xxZ_hwe8-0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLCJTwsNQTm1GmxdWiikCJEjEFyA9g"
-            width={300}
-            height={300}
-            alt="Album Cover"
-            className="aspect-square w-full rounded-lg object-cover transition-all group-hover:scale-105"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
-            <h3 className="text-xl font-bold text-white">Album Name</h3>
-            <p className="text-sm text-white">Artist Name</p>
-            <Button variant="outline" className="text-white">
-              Play
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  </main> 
-  <footer className="sticky bottom-0 z-10 flex h-20 w-full items-center justify-between border-t bg-background px-4 shadow-sm md:px-6">
-          <div className="flex items-center gap-4">
-            <img
-              src="https://i.ytimg.com/vi/0xxZ_hwe8-0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFogYShlMA8=&rs=AOn4CLCJTwsNQTm1GmxdWiikCJEjEFyA9g"
-              width={50}
-              height={50}
-              alt="Album Cover"
-              className="h-10 w-10 rounded-md object-cover"
-              style={{ aspectRatio: "50/50", objectFit: "cover" }}
-            />
-            <div>
-              <h3 className="text-sm font-medium">Song Name</h3>
-              <p className="text-xs text-muted-foreground">Artist Name</p>
+    <section className="">
+   <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+          <Tabs defaultValue="all">
+            <div className="flex items-center">
+              <TabsList>
+                <TabsTrigger value="all">All</TabsTrigger>
+                <TabsTrigger value="active">Active</TabsTrigger>
+                <TabsTrigger value="draft">Draft</TabsTrigger>
+                <TabsTrigger value="archived" className="hidden sm:flex">
+                  Archived
+                </TabsTrigger>
+              </TabsList>
+              <div className="ml-auto flex items-center gap-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" size="sm" className="h-7 gap-1">
+                      <ListFilter className="h-3.5 w-3.5" />
+                      <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                        Filter
+                      </span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuLabel>Filter by</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuCheckboxItem checked>
+                      Active
+                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>
+                      Archived
+                    </DropdownMenuCheckboxItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <Button size="sm" variant="outline" className="h-7 gap-1">
+                  <File className="h-3.5 w-3.5" />
+                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                    Export
+                  </span>
+                </Button>
+                <Button size="sm" className="h-7 gap-1">
+                  <PlusCircle className="h-3.5 w-3.5" />
+                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                    Add Product
+                  </span>
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon">
-              <ShuffleIcon className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <SkipBackIcon className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <PlayIcon className="h-6 w-6" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <SkipForwardIcon className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <RepeatIcon className="h-5 w-5" />
-            </Button>
-            <Slider
-              className="h-1 w-40 [&>span:first-child]:h-1 [&>span:first-child]:bg-primary [&_[role=slider]]:bg-primary [&_[role=slider]]:w-3 [&_[role=slider]]:h-3 [&_[role=slider]]:border-0 [&>span:first-child_span]:bg-primary [&_[role=slider]:focus-visible]:ring-0 [&_[role=slider]:focus-visible]:ring-offset-0 [&_[role=slider]:focus-visible]:scale-105 [&_[role=slider]:focus-visible]:transition-transform"
-              defaultValue={[40]}
-            />
-            <Button variant="ghost" size="icon">
-              <Volume2Icon className="h-5 w-5" />
-            </Button>
-          </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <ListIcon className="h-5 w-5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-64">
-              <DropdownMenuLabel>Playlist</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium">Song Name</h4>
-                    <p className="text-xs text-muted-foreground">Artist Name</p>
+            <TabsContent value="all">
+              <Card x-chunk="dashboard-06-chunk-0">
+                <CardHeader>
+                  <CardTitle>Products</CardTitle>
+                  <CardDescription>
+                    Manage your products and view their sales performance.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="hidden w-[100px] sm:table-cell">
+                          <span className="sr-only">Image</span>
+                        </TableHead>
+                        <TableHead>Name</TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead>Price</TableHead>
+                        <TableHead className="hidden md:table-cell">
+                          Total Sales
+                        </TableHead>
+                        <TableHead className="hidden md:table-cell">
+                          Created at
+                        </TableHead>
+                        <TableHead>
+                          <span className="sr-only">Actions</span>
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="hidden sm:table-cell">
+                          <Image
+                            alt="Product image"
+                            className="aspect-square rounded-md object-cover"
+                            height="64"
+                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            width="64"
+                          />
+                        </TableCell>
+                        <TableCell className="font-medium">
+                          Laser Lemonade Machine
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="outline">Draft</Badge>
+                        </TableCell>
+                        <TableCell>$499.99</TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          25
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          2023-07-12 10:42 AM
+                        </TableCell>
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                aria-haspopup="true"
+                                size="icon"
+                                variant="ghost"
+                              >
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="hidden sm:table-cell">
+                          <Image
+                            alt="Product image"
+                            className="aspect-square rounded-md object-cover"
+                            height="64"
+                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            width="64"
+                          />
+                        </TableCell>
+                        <TableCell className="font-medium">
+                          Hypernova Headphones
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="outline">Active</Badge>
+                        </TableCell>
+                        <TableCell>$129.99</TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          100
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          2023-10-18 03:21 PM
+                        </TableCell>
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                aria-haspopup="true"
+                                size="icon"
+                                variant="ghost"
+                              >
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="hidden sm:table-cell">
+                          <Image
+                            alt="Product image"
+                            className="aspect-square rounded-md object-cover"
+                            height="64"
+                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            width="64"
+                          />
+                        </TableCell>
+                        <TableCell className="font-medium">
+                          AeroGlow Desk Lamp
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="outline">Active</Badge>
+                        </TableCell>
+                        <TableCell>$39.99</TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          50
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          2023-11-29 08:15 AM
+                        </TableCell>
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                aria-haspopup="true"
+                                size="icon"
+                                variant="ghost"
+                              >
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="hidden sm:table-cell">
+                          <Image
+                            alt="Product image"
+                            className="aspect-square rounded-md object-cover"
+                            height="64"
+                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            width="64"
+                          />
+                        </TableCell>
+                        <TableCell className="font-medium">
+                          TechTonic Energy Drink
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="secondary">Draft</Badge>
+                        </TableCell>
+                        <TableCell>$2.99</TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          0
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          2023-12-25 11:59 PM
+                        </TableCell>
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                aria-haspopup="true"
+                                size="icon"
+                                variant="ghost"
+                              >
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="hidden sm:table-cell">
+                          <Image
+                            alt="Product image"
+                            className="aspect-square rounded-md object-cover"
+                            height="64"
+                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            width="64"
+                          />
+                        </TableCell>
+                        <TableCell className="font-medium">
+                          Gamer Gear Pro Controller
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="outline">Active</Badge>
+                        </TableCell>
+                        <TableCell>$59.99</TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          75
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          2024-01-01 12:00 AM
+                        </TableCell>
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                aria-haspopup="true"
+                                size="icon"
+                                variant="ghost"
+                              >
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="hidden sm:table-cell">
+                          <Image
+                            alt="Product image"
+                            className="aspect-square rounded-md object-cover"
+                            height="64"
+                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            width="64"
+                          />
+                        </TableCell>
+                        <TableCell className="font-medium">
+                          Luminous VR Headset
+                        </TableCell>
+                        <TableCell>
+                          <Badge variant="outline">Active</Badge>
+                        </TableCell>
+                        <TableCell>$199.99</TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          30
+                        </TableCell>
+                        <TableCell className="hidden md:table-cell">
+                          2024-02-14 02:14 PM
+                        </TableCell>
+                        <TableCell>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                aria-haspopup="true"
+                                size="icon"
+                                variant="ghost"
+                              >
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </CardContent>
+                <CardFooter>
+                  <div className="text-xs text-muted-foreground">
+                    Showing <strong>1-10</strong> of <strong>32</strong>{" "}
+                    products
                   </div>
-                  <Button variant="ghost" size="icon">
-                    <MoveHorizontalIcon className="h-5 w-5" />
-                  </Button>
-                </div>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium">Song Name</h4>
-                    <p className="text-xs text-muted-foreground">Artist Name</p>
-                  </div>
-                  <Button variant="ghost" size="icon">
-                    <MoveHorizontalIcon className="h-5 w-5" />
-                  </Button>
-                </div>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium">Song Name</h4>
-                    <p className="text-xs text-muted-foreground">Artist Name</p>
-                  </div>
-                  <Button variant="ghost" size="icon">
-                    <MoveHorizontalIcon className="h-5 w-5" />
-                  </Button>
-                </div>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </footer>
+                </CardFooter>
+              </Card>
+            </TabsContent>
+          </Tabs>
+        </main>
     </section>
 
   )
