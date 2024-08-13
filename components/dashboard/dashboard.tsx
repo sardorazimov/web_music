@@ -1,42 +1,69 @@
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable @next/next/no-img-element */
-'use client'
-import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-  } from "@/components/ui/alert-dialog"
+import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useId, useRef, useState } from "react";
-import { useOutsideClick } from "@/hooks/outside";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import { Button } from "../ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { Badge, File, ListFilter, ListIcon, MoreHorizontal, MoveHorizontalIcon, PlayIcon, PlusCircle, RepeatIcon, ShuffleIcon, SkipBackIcon, SkipForwardIcon, Volume2Icon } from "lucide-react";
-import { Slider } from "../ui/slider";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
+import {
+  File,
+  Home,
+  LineChart,
+  ListFilter,
+  MoreHorizontal,
+  Package,
+  Package2,
+  PanelLeft,
+  PlusCircle,
+  Search,
+  Settings,
+  ShoppingCart,
+  Users2,
+} from "lucide-react"
+
+import { Badge } from "@/components/ui/badge"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-  
 
-
-const GridLayout = () => {
-    
+const Dashboard = () => {
   return (
-    <section className="">
-   <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+    <div>
+         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
           <Tabs defaultValue="all">
             <div className="flex items-center">
               <TabsList>
@@ -119,7 +146,7 @@ const GridLayout = () => {
                             alt="Product image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
-                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            src="/placeholder.svg"
                             width="64"
                           />
                         </TableCell>
@@ -162,7 +189,7 @@ const GridLayout = () => {
                             alt="Product image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
-                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            src="/placeholder.svg"
                             width="64"
                           />
                         </TableCell>
@@ -205,7 +232,7 @@ const GridLayout = () => {
                             alt="Product image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
-                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            src="/placeholder.svg"
                             width="64"
                           />
                         </TableCell>
@@ -248,7 +275,7 @@ const GridLayout = () => {
                             alt="Product image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
-                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            src="/placeholder.svg"
                             width="64"
                           />
                         </TableCell>
@@ -291,7 +318,7 @@ const GridLayout = () => {
                             alt="Product image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
-                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            src="/placeholder.svg"
                             width="64"
                           />
                         </TableCell>
@@ -334,7 +361,7 @@ const GridLayout = () => {
                             alt="Product image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
-                            src="https://th.bing.com/th/id/OIP.fsqfK4P8RRyYVI4wIW1IxQHaEK?rs=1&pid=ImgDetMain"
+                            src="/placeholder.svg"
                             width="64"
                           />
                         </TableCell>
@@ -384,10 +411,8 @@ const GridLayout = () => {
             </TabsContent>
           </Tabs>
         </main>
-    </section>
-
+    </div>
   )
 }
 
-
-export default GridLayout
+export default Dashboard

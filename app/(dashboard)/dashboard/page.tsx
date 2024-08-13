@@ -1,27 +1,34 @@
 "use client"
 /* eslint-disable @next/next/no-img-element */
-import { LandingDashboard } from '@/components/dashboard/LandingDashboard'
+
 import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { Slider } from '@/components/ui/slider'
 import Test from '@/test/test'
-import { FastForwardIcon, ListIcon, MoveHorizontalIcon, PlayIcon, RepeatIcon, RewindIcon, ShuffleIcon, SkipBackIcon, SkipForwardIcon, Volume2Icon } from 'lucide-react'
+import { FastForwardIcon, ListIcon, MoveHorizontalIcon, PlayIcon, Plus, Podcast, Radio, RepeatIcon, RewindIcon, ShuffleIcon, SkipBackIcon, SkipForwardIcon, Volume2Icon } from 'lucide-react'
 import Image from 'next/image'
 import { MarqueeDemo } from './Menu'
+import Dashboard from '@/components/dashboard/dashboard'
 
 
 const page = () => {
 
   return (
-    <div className="flex  w-full h-screen">
-     <main className='flex flex-col lg:max-w-screen-2xl sm:max-w-sm h-48  mx-auto   items-center '>
-       <MarqueeDemo />
-     </main>
+    <div className="flex flex-col w-full h-screen">
+      <main className='flex w-full mx-10 mt-1 h-48   '>
+        <div className='bg-muted w-full h-full'>
+          <div className='mx-2 w-full h-full rounded-lg '>
+            <img src="/artist/lola.jpeg" alt="Artist" className='w-full h-full blur rounded-lg' />
+          </div>
+        </div>
+      </main>
+
+     <div className='mt-20'>
+      <Dashboard />
+     </div>
 
 
-
-
-{/*     
+      {/*     
        <section className=" mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-10 gap-4 mt-4 ">
         <div className=" relative  group flex  flex-col items-center justify-center overflow-hidden gap-x-4 bg-neutral-400/5 cursor-pointer hover:bg-neutral-400/10 transition p-3 ">
           <div className=" relative  aspect-square w-full h-full rounded-md overflow-hidden ">
