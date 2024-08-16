@@ -2,8 +2,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      Album
+    <div className='flex mt-32'>
+      A
     </div>
   )
 }

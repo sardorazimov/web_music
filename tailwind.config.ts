@@ -63,6 +63,9 @@ const config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
+        'border-animate': {
+                    to: { '--border-angle': '360deg' },
+                },
         "marquee-vertical": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
@@ -71,6 +74,7 @@ const config = {
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        'border-animate': 'border 4s linear infinite',
       },
     },
   },
